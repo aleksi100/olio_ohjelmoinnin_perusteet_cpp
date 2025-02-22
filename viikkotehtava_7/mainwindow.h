@@ -18,10 +18,17 @@ public:
     ~MainWindow();
 
 private slots:
-    void HandleClick();
+    void numberClickHandler();
+    void clearAndEnterClickHandler();
+    void addSubMulDivClickHandler();
 
 private:
     Ui::MainWindow *ui;
-    int number;
+    QString number1, number2;
+    int state;
+    float result;
+    QString operand;
+    void resetLineEdits();
+
 };
 #endif // MAINWINDOW_H
